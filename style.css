@@ -34,8 +34,8 @@ h1 {
     margin: 0;
 }
 
-a {
-    display: block;
+.google-link {
+    display: inline-block;
     margin-top: 20px;
 }
 
@@ -96,4 +96,10 @@ img {
     color: white;
     font-size: 2em;
     cursor: pointer;
+}
+
+.footer {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9em;
 }
