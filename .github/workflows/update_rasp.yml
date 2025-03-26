@@ -1,15 +1,31 @@
 name: Update Rasp
 
-on: push
+on:
+  push:
+    branches:
+      - main
+
+  schedule:
+    - cron: "0 15 * * *"
 
 jobs:
   update:
     runs-on: ubuntu-latest
     
     steps:
+      - uses: actions/checkout@v4
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: python configure
+        run: pip install -r python/requirements.txt
+      - name: run script
+        run: python python/update.py     
       - name: git push
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "Github Actions"
-          echo "aboba"
-          
+          git add .
+          git commit -m "schedule update"
+          git push 
