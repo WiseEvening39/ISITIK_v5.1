@@ -34,18 +34,39 @@ h1 {
     margin: 0;
 }
 
-.google-link {
-    display: inline-block;
-    margin-top: 20px;
-}
-
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.block {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    background-size: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+}
+
+.block:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.schedule-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .schedule {
@@ -102,4 +123,21 @@ img {
     margin-top: 20px;
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .blocks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .schedule-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .schedule {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
 }
