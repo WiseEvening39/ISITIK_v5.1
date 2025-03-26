@@ -16,8 +16,9 @@
     </style>
 </head>
 <body>
+    <audio id="meowSound" src="meow/meow.mp3"></audio>
     <div class="overlay">
-        <img src="img/logo.jpg" alt="Логотип" class="logo">
+        <img src="img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
         <h1>Тестовый сайтик для иситиков</h1>
     </div>
 
@@ -56,6 +57,10 @@
     </div>
 
     <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+
         function openFullscreen(src) {
             document.getElementById("fullscreenImg").src = src;
             document.getElementById("fullscreen").style.display = "flex";
