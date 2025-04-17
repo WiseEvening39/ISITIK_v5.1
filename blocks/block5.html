@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полезные ссылки | Расписание хуйни</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('../assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="meowSound" src="../assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        </a>
+        <h1>Полезные ссылки</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="../assets/insideBlocks/inside5.png" alt="Полезные ссылки" class="neuro-image">
+
+            <h2>Официальные ресурсы:</h2>
+            <ul>
+                <li><a href="https://www.cspu.ru/" target="_blank">Ссылка на сайт вуза</a></li>
+                <li><a href="https://cspu.sharepoint.com/Education/Shared%20Documents/Forms/AllItems.aspx?id=%2FEducation%2FShared%20Documents%2FIITiMOI%2FISiT&viewid=c4d1b0a4%2D2b55%2D4e5b%2D9042%2D6d7bb4925514" target="_blank">SharePoint ИСиТиков</a> (удачи с домашкой, котики!)</li>
+            </ul>
+
+            <div class="signature">
+                <p>P.S. Если с домашкой туго, тыкай на 1 раздел.<br>
+                Но мы тебе ничего не говорили ;)</p>
+            </div>
+
+            <a href="../index.html" class="back-button">← Назад к блокам</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме и под водкой.
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+    </script>
+</body>
+</html>

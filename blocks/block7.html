@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блок 1 | Расписание хуйни</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('../assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="meowSound" src="../assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        </a>
+        <h1>Блок 1</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Содержимое блока 1</h2>
+            <img src="../assets/insideBlocks/inside7.png" alt="Контент блока 1" class="block-image">
+            <p>Описание для этого блока. Можно добавить текст, списки или другие элементы.</p>
+            <a href="../index.html" class="back-button">← Назад к блокам</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме и под водкой.
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+    </script>
+</body>
+</html>

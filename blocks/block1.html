@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главное | Расписание хуйни</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('../assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="meowSound" src="../assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        </a>
+        <h1>Важные материалы</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="../assets/insideBlocks/inside1.png" alt="Главное" class="neuro-image">
+
+            <p>Невероятным трудом и усилиями был создан этот луч света в тяжелом существовании маленьких ИСиТиков...</p>
+
+            <p><a href="https://gdz.ru/class-5/matematika/" target="_blank">Решенные лабораторки по программированию</a></p>
+
+            <div class="poem">
+                <p>Да поможет нам Windows+E,</p>
+                <p>Чтобы направлял нас Alt+Tab на верный путь,</p> 
+                <p>Да сохрани нас всех Ctrl+S,</p>
+                <p>Чтобы не настиг нас Alt+F4 внезапный,</p>
+                <p>Во имя Ctrl`a, Alt`a и Del`a!</p>
+                <p>Enter</p>
+            </div>
+
+            <div class="signature">
+                <p>Создано с любовью для ИСиТиков</p>
+            </div>
+
+            <a href="../index.html" class="back-button">← Назад к блокам</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме и под водкой.
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+    </script>
+</body>
+</html>

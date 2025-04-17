@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нейроночки | Расписание хуйни</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('../assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="meowSound" src="../assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        </a>
+        <h1>Нейроночки</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <!-- Добавлено изображение -->
+            <img src="../assets/insideBlocks/inside2.png" alt="Нейро-помощники" class="neuro-image">
+
+            <h2>Ассистенты:</h2>
+            <ul>
+                <li><strong>DeepSeek</strong> (<a href="https://chat.deepseek.com" target="_blank">chat.deepseek.com</a>): Просто китайский папочка, все умные все знают, юзать лучше R1</li>
+                <li><strong>Perplexity</strong> (<a href="https://perplexity.ai/" target="_blank">perplexity.ai</a>): поисковая система с ИИ и помощник в исследованиях</li>
+                <li><strong>Claude</strong> (<a href="https://claude.ai/" target="_blank">claude.ai</a>): универсальный чат-бот, подходит для проектов и обмена работами</li>
+                <li><strong>ChatGPT</strong> (<a href="https://chatgpt.com/" target="_blank">chatgpt.com</a>): кому я рассказываю...., но волки советуют Advanced Voice Mode для общения с ИИ</li>
+            </ul>
+
+            <!-- Остальной контент без изменений -->
+            <h2>Для продуктивной работы:</h2>
+            <ul>
+                <li><strong>Granola</strong> (<a href="https://granola.ai/" target="_blank">granola.ai</a>): ИИ-блокнот, который слушает ваши встречи</li>
+                <li><strong>Flow</strong> (<a href="https://www.flowvoice.ai/" target="_blank">flowvoice.ai</a>): голосовая диктовка в любом приложении</li>
+                <li><strong>Gamma</strong> (<a href="https://gamma.app/" target="_blank">gamma.app</a>) и <strong>SlidesAI</strong> (<a href="https://www.slidesai.io/ru" target="_blank">slidesai.io</a>): создание презентаций</li>
+                <li><strong>Adobe Acrobat</strong> (<a href="https://acrobat.adobe.com/" target="_blank">acrobat.adobe.com</a>): работа с PDF-файлами</li>
+                <li><strong>Cubby</strong> (<a href="https://cubby.nyc/" target="_blank">cubby.nyc</a>): пространство для совместных исследований</li>
+                <li><strong>Cora</strong> (<a href="https://cora.computer/" target="_blank">cora.computer</a>): помощник для электронной почты</li>
+                <li><strong>Lindy</strong> (<a href="https://lindy.ai/" target="_blank">lindy.ai</a>): создание ИИ-агентов</li>
+            </ul>
+
+            <h2>Для создания продуктов (код):</h2>
+            <ul>
+                <li><strong>Cursor</strong> (<a href="https://cursor.so/" target="_blank">cursor.so</a>): редактор кода с ИИ</li>
+                <li><strong>Replit</strong> (<a href="https://replit.com/" target="_blank">replit.com</a>): создание приложений из описания</li>
+                <li><strong>Anychat</strong> (<a href="https://huggingface.co/spaces/akhaliq/anychat" target="_blank">huggingface.co</a>): использование любых ИИ-моделей</li>
+                <li><strong>Codeium</strong> (<a href="https://codeium.com/" target="_blank">codeium.com</a>): автозаполнение кода</li>
+            </ul>
+
+            <h2>Для создания контента:</h2>
+            <ul>
+                <li><strong>ElevenLabs</strong> (<a href="https://elevenlabs.io/" target="_blank">elevenlabs.io</a>): реалистичные ИИ-голоса</li>
+                <li><strong>Suno</strong> (<a href="https://suno.com/" target="_blank">suno.com</a>) и <strong>Udio</strong> (<a href="https://udio.com/" target="_blank">udio.com</a>): создание музыки</li>
+                <li><strong>Midjourney</strong> (<a href="https://midjourney.com/" target="_blank">midjourney.com</a>), <strong>Ideogram</strong> (<a href="https://ideogram.ai/" target="_blank">ideogram.ai</a>), <strong>Playground</strong> (<a href="https://playground.com/" target="_blank">playground.com</a>): генерация изображений</li>
+                <li><strong>Runway</strong> (<a href="https://runwayml.com/" target="_blank">runwayml.com</a>), <strong>Kling</strong> (<a href="https://klingai.com/" target="_blank">klingai.com</a>), <strong>Viggle</strong> (<a href="https://viggle.ai/" target="_blank">viggle.ai</a>): генерация видео</li>
+                <li><strong>Krea</strong> (<a href="https://krea.ai/" target="_blank">krea.ai</a>): редактирование изображений и видео</li>
+                <li><strong>PhotoRoom</strong> (<a href="https://photoroom.com/" target="_blank">photoroom.com</a>): редактор для товаров</li>
+            </ul>
+
+            <h2>Эм, чем ты болен чтоб это юзать?</h2>
+            <ul>
+                <li><strong>СИГМАБОЙ</strong> (<a href="https://giga.chat" target="_blank">giga.chat</a>): нейронка от сбера (на уровне дяди Васи)</li>
+            </ul>
+
+            <p><strong>P.S.</strong> <a href="https://windsurfai.org/" target="_blank">Windsurf</a> сделает ВСЕ за тебя (рай для вайбкодера)</p>
+
+            <h3>Отдохни:</h3>
+            <p>
+                <a href="https://remix.ai/" target="_blank">remix.ai</a> | 
+                <a href="https://x.com/i/grok" target="_blank">Grok</a> | 
+                <a href="https://heycurio.com/" target="_blank">Curio</a>
+            </p>
+
+            <div class="signature">
+                <p>by drugsnofun</p>
+            </div>
+
+            <a href="../index.html" class="back-button">← Назад к блокам</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме и под водкой.
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+    </script>
+</body>
+</html>

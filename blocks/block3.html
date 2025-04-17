@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord сервер | Расписание хуйни</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('../assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="meowSound" src="../assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        </a>
+        <h1>Discord сервер</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="../assets/insideBlocks/inside3.png" alt="Discord сервер" class="neuro-image">
+
+            <p>Опа? А что это у нас тут? Локальный сервер DISCORD для Иситиков?) Хочется проконсультироваться с одногруппниками, поиграть в онлайн игры или просто пообщаться - сервер всегда открыт для вас)</p>
+
+            <p><a href="https://discord.gg/xK7gvNdAGD" target="_blank">*тык*</a></p>
+
+            <p>Если не работает дискорд, то всегда можно скачать обход блокировок по ссылке!</p>
+
+            <p><a href="https://github.com/Flowseal/zapret-discord-youtube/releases" target="_blank">*актуальная версия zapret*</a></p>
+
+            <div class="signature">
+                <p>Приятного общения!</p>
+            </div>
+
+            <a href="../index.html" class="back-button">← Назад к блокам</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме и под водкой.
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+    </script>
+</body>
+</html>

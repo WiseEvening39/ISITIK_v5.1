@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мемы и полезное | Расписание хуйни</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('../assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <audio id="meowSound" src="../assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        </a>
+        <h1>Мемы и полезное</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="../assets/insideBlocks/inside6.png" alt="Мемы и полезное" class="neuro-image">
+
+            <p>В скором времени тут появятся локальные мемы-фотокарточки. Раздел в разработке.</p>
+
+            <h2>Полезная ссылка:</h2>
+            <ul>
+                <li><a href="https://ratnik74.ru/" target="_blank">бесплатные энергетики</a></li>
+            </ul>
+
+            <div class="signature">
+                <p>Скоро здесь будет больше контента!</p>
+            </div>
+
+            <a href="../index.html" class="back-button">← Назад к блокам</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме ,копая окопы для наших слонов ZZZ.
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+    </script>
+</body>
+</html>
