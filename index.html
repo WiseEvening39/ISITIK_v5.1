@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание для ИСиТиков</title>
+    <style>
+        @font-face {
+            font-family: 'NeuropolX';
+            src: url('assets/fonts/neuropolx-rg.ttf') format('truetype');
+        }
+        body, body * {
+            font-family: 'NeuropolX' !important;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="meowSound" src="assets/audio/meow.mp3"></audio>
+    <div class="overlay">
+        <img src="assets/img/logo.jpg" alt="Логотип" class="logo" onclick="playSound()">
+        <h1>Тестовый сайтик для иситиков</h1>
+    </div>
+
+    <div class="container">
+        <div class="blocks">
+            <a href="blocks/block1.html" class="block" style="background-image: url('assets/img/blocks/1.png');" data-title="Главное"></a>
+            <a href="blocks/block2.html" class="block" style="background-image: url('assets/img/blocks/2.png');" data-title="Нейроночки"></a>
+            <a href="blocks/block3.html" class="block" style="background-image: url('assets/img/blocks/3.png');" data-title="Discord"></a>
+            <a href="blocks/block4.html" class="block" style="background-image: url('assets/img/blocks/4.png');" data-title="Контакты"></a>
+            <a href="blocks/block5.html" class="block" style="background-image: url('assets/img/blocks/5.png');" data-title="Полезное"></a>
+            <a href="blocks/block6.html" class="block" style="background-image: url('assets/img/blocks/6.png');" data-title="Мемы"></a>
+            <a href="#" class="block" id="block7" style="background-image: url('assets/img/blocks/7.png');" onclick="vanishBlock(event)" data-title="*тык*"></a>
+            <a href="blocks/block8.html" class="block" style="background-image: url('assets/img/blocks/8.png');" data-title="Команда"></a>
+        </div>
+
+        <div class="schedule-container">
+            <div class="schedule">
+                <h2>Актуальное расписание</h2>
+                <div class="schedule-img-container">
+                    <img src="assets/img/rasp1.png" alt="Актуальное расписание" onclick="openFullscreen(this.src)">
+                </div>
+            </div>
+            <div class="schedule">
+                <h2>Предыдущее расписание</h2>
+                <div class="schedule-img-container">
+                    <img src="assets/img/rasp2.png" alt="Предыдущее расписание" onclick="openFullscreen(this.src)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen" id="fullscreen">
+        <span class="close" onclick="closeFullscreen()">&times;</span>
+        <img id="fullscreenImg" src="" alt="Полное расписание">
+    </div>
+
+    <div class="help-box">
+        <div class="help-box-toggle" onclick="toggleHelpBox()">?</div>
+        <div class="help-box-content">
+            <p>Есть вопросы касательно сайта? Разрабы сами не знают как они это написали! Мы бы могли написать "Обратитесь в поддержку", но и она ни черта не знает(((</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Сайт пилился на чистом энтузиазме и под водкой. Поддержите разраба энергосом, пожалуйста...
+    </div>
+
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Загрузка...</div>
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById("meowSound").play();
+        }
+        
+        function openFullscreen(src) {
+            document.getElementById("fullscreenImg").src = src;
+            document.getElementById("fullscreen").style.display = "flex";
+        }
+        
+        function closeFullscreen() {
+            document.getElementById("fullscreen").style.display = "none";
+        }
+        
+        function vanishBlock(event) {
+            event.preventDefault();
+            const block = document.getElementById('block7');
+            const blyatSound = new Audio('assets/audio/blyat.mp3');
+            
+            block.classList.add('vanish-animation');
+            blyatSound.play();
+            
+            setTimeout(() => {
+                block.classList.remove('vanish-animation');
+            }, 1000);
+        }
+
+        function toggleHelpBox() {
+            const helpBox = document.querySelector('.help-box');
+            helpBox.classList.toggle('expanded');
+        }
+
+        document.querySelectorAll('a[href^="blocks/block"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const destination = this.getAttribute('href');
+                document.querySelector('.page-loader').classList.add('active');
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 800);
+            });
+        });
+
+        window.addEventListener('load', function() {
+            document.querySelector('.page-loader').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
